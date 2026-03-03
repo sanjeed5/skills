@@ -4,9 +4,9 @@ Agent skills curated by [Sanjeed](https://x.com/sanjeed_i). These extend coding 
 
 ## Available Skills
 
-| Skill | Description |
-|-------|-------------|
-| [x-api-reader](x-api-reader/SKILL.md) | Read posts, threads, user timelines, and search X (Twitter) via the API v2 |
+| Skill | Description | Install |
+|-------|-------------|---------|
+| [x-api-reader](x-api-reader/SKILL.md) | Read posts, threads, user timelines, and search X (Twitter) via the API v2 | `npx skills add sanjeed5/skills --skill x-api-reader` |
 
 ## Install
 
