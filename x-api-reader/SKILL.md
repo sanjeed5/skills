@@ -124,6 +124,15 @@ curl -s "https://api.x.com/2/tweets/search/recent?query=conversation_id:{conv_id
 3. To get only the original author's posts in the thread, add `from:username`:
    `query=conversation_id:{conv_id} from:username`
 
+**GOTCHA: `search/recent` only covers the last 7 days.** For older threads, use the user timeline endpoint instead with `start_time` and `end_time` to narrow the window around the tweet date. Then filter results by `conversation_id` to find thread replies:
+
+```bash
+curl -s "https://api.x.com/2/users/{user_id}/tweets?max_results=100&tweet.fields=created_at,public_metrics,conversation_id,note_tweet,referenced_tweets&start_time=2025-12-22T00:00:00Z&end_time=2025-12-25T00:00:00Z" \
+  -H "Authorization: Bearer $X_BEARER_TOKEN"
+```
+
+Then filter the results where `conversation_id` matches the original tweet's ID. This works for any tweet age, unlike search/recent.
+
 ## Fields & Expansions Quick Reference
 
 **Always request these tweet.fields for useful output:**
