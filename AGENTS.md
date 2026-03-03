@@ -1,1 +1,1 @@
-Skills curated by Sanjeed. This is a public repository — never commit secrets, API keys, tokens, or any private credentials here.
+This is a public repository. Never commit secrets, API keys, tokens, credentials, or any personally identifying information here.
